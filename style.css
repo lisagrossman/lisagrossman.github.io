@@ -121,6 +121,35 @@ main {
   border-bottom: 1px solid var(--accent);
 }
 
+.headshot {
+  float: right;
+  margin: 0 0 1.5rem 2rem;
+  width: 220px;
+}
+
+.headshot img {
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+}
+
+.headshot figcaption {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+  text-align: right;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .headshot {
+    float: none;
+    margin: 0 0 1.5rem 0;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
 /* ── Section Headings ── */
 h2 {
   font-family: 'Playfair Display', Georgia, serif;
