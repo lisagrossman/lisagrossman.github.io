@@ -1,0 +1,241 @@
+/* ── Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream:   #FAF7F2;
+  --warm-white: #F5F0E8;
+  --ink:     #1C1C1A;
+  --muted:   #6B6560;
+  --accent:  #B04A1F;
+  --rule:    #D9D0C4;
+  --max-w:   720px;
+}
+
+html { font-size: 18px; scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Lora', Georgia, serif;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header / Nav ── */
+header {
+  border-bottom: 1px solid var(--rule);
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--cream);
+}
+
+header .site-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+header .site-name:hover { color: var(--accent); }
+
+nav {
+  display: flex;
+  gap: 2rem;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+nav a:hover, nav a.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ── Main Content ── */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 3.5rem 2rem 4rem;
+}
+
+/* ── Page Hero ── */
+.page-hero {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.page-hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.page-hero .tagline {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* ── About Page ── */
+.about-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-body p { font-size: 1rem; }
+
+.about-body .contact-line {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.about-body .contact-line a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+/* ── Section Headings ── */
+h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+/* ── Clips / Work ── */
+.clips-category {
+  margin-bottom: 3rem;
+}
+
+.clips-category h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.clip {
+  margin-bottom: 1.75rem;
+}
+
+.clip h3 a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.clip h3 a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.clip .meta {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+  font-style: italic;
+}
+
+.clip .description {
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
+/* ── Speaking ── */
+.speaking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.talk {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.talk:last-child { border-bottom: none; }
+
+.talk h3 { font-size: 1.05rem; }
+
+.talk .meta {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 0.4rem;
+}
+
+.talk p { font-size: 0.92rem; }
+
+/* ── Footer ── */
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+}
+
+footer a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: color 0.2s;
+}
+
+footer a:hover { color: var(--accent); }
+
+footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  header { padding: 1.25rem 1.25rem; }
+  main { padding: 2.5rem 1.25rem 3rem; }
+  .page-hero h1 { font-size: 2rem; }
+  nav { gap: 1.25rem; }
+}
