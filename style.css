@@ -122,9 +122,9 @@ main {
 }
 
 .headshot {
-  float: right;
-  margin: 0 0 1.5rem 2rem;
-  width: 110px;
+  float: left;
+  margin: 0 2rem 1.5rem 0;
+  width: 165px;
 }
 
 .headshot img {
