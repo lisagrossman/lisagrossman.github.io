@@ -101,13 +101,12 @@ main {
 }
 
 /* ── About Page ── */
-.about-body {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
+.about-body { }
 
-.about-body p { font-size: 1rem; }
+.about-body p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
 
 .about-body .contact-line {
   margin-top: 1rem;
